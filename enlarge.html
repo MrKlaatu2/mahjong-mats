@@ -426,13 +426,13 @@
  </div>
  </footer>
 
-<!-- Lightbox Modal View Window -->
+<!-- Lightbox Modal View Layout Window -->
 <div id="mat-large-view" style="display:none; position:fixed; z-index:999999; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); align-items:center; justify-content:center; cursor:zoom-out;">
  <button id="lightbox-close-btn" style="position:absolute; top:20px; right:30px; color:#fff; font-size:60px; background:none; border:none; cursor:pointer; font-family:Arial, sans-serif; font-weight:300; line-height:1;">&times;</button>
  <img id="large-view-img" style="max-width:92%; max-height:92%; object-fit:contain; border-radius:6px; box-shadow:0 12px 40px rgba(0,0,0,0.7);" src="" alt="Enlarged detailed mat view">
 </div>
 
-<!-- Lightbox Activation Logic -->
+<!-- Decoupled Frame Listener Engine -->
 <script type="text/javascript">
   const overlayContainer = document.getElementById('mat-large-view');
   const overlayCloseBtn = document.getElementById('lightbox-close-btn');
@@ -451,43 +451,42 @@
     if (e.key === 'Escape') closeMatLightbox();
   });
 
-  // Safe tracking engine that runs directly on your parent page container
-  const parentClickEngine = setInterval(function() {
-    const shopifyIframes = document.querySelectorAll('iframe[name^="shopify-frame"]');
-    shopifyIframes.forEach(function(iframe) {
+  // Independent runtime loop: Monitors iframe loading and establishes the zoom handlers safely
+  const runClickEngine = setInterval(function() {
+    const targetIframes = document.querySelectorAll('iframe[name^="shopify-frame"]');
+    targetIframes.forEach(function(iframe) {
       try {
-        const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-        const targetImages = innerDoc.querySelectorAll('.shopify-buy__product-img');
+        const frameDoc = iframe.contentDocument || iframe.contentWindow.document;
+        const clickableImages = frameDoc.querySelectorAll('.shopify-buy__product-img');
         
-        targetImages.forEach(function(img) {
+        clickableImages.forEach(function(img) {
           if (!img.dataset.hasLightbox) {
             img.dataset.hasLightbox = "true";
             img.style.cursor = 'zoom-in';
             
-            // Listen for click inside iframe and safely transition the image path
             img.addEventListener('click', function(e) {
               e.preventDefault();
               e.stopPropagation();
               
-              let srcPath = img.src;
-              // Clean Shopify thumbnail extensions to show full master quality
-              srcPath = srcPath.replace(/_[0-9]+x[0-9]+_crop_center\./, '.')
-                               .replace(/_[0-9]+x[0-9]+\./, '.')
-                               .replace(/_master\./, '.')
-                               .replace(/_[0-9]+x\./, '.');
+              let cleanedPath = img.src;
+              // Remove Shopify size compression tokens to retrieve high-definition master artwork
+              cleanedPath = cleanedPath.replace(/_[0-9]+x[0-9]+_crop_center\./, '.')
+                                       .replace(/_[0-9]+x[0-9]+\./, '.')
+                                       .replace(/_master\./, '.')
+                                       .replace(/_[0-9]+x\./, '.');
               
-              largeImage.src = srcPath;
+              largeImage.src = cleanedPath;
               overlayContainer.style.display = 'flex';
             });
           }
         });
       } catch (err) {
-        // Safe cross-domain block fallback
+        // Suppress initial secure cross-domain warnings while elements settle
       }
     });
   }, 1000);
   
-  setTimeout(function() { clearInterval(parentClickEngine); }, 30000);
+  setTimeout(function() { clearInterval(runClickEngine); }, 25000);
 </script>
 </body>
 </html>
