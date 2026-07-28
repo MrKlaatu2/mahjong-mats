@@ -237,230 +237,257 @@
         <p>Original art collections and functional, premium layouts created exclusively by Los Angeles' premier mahjong destination. Designed for effortless tile glide, noise reduction, and a flawless playing surface.</p>
     </section>
 
-    <!-- LIVE SHOPIFY CATALOG EMBED ZONE -->
-    <main class="store-section">
-        
-        <!-- PASTE YOUR COPED SHOPIFY MASTER COLLECTION CODE DIRECTLY BELOW THIS LINE -->
+<!-- LIVE SHOPIFY CATALOG EMBED ZONE -->
+ <main class="store-section">
+ 
+ <!-- PASTE YOUR COPED SHOPIFY MASTER COLLECTION CODE DIRECTLY BELOW THIS LINE -->
 <div id='collection-component-1785095239479'></div>
 <script type="text/javascript">
 /*<![CDATA[*/
 (function () {
-  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-  if (window.ShopifyBuy) {
-    if (window.ShopifyBuy.UI) {
-      ShopifyBuyInit();
-    } else {
-      loadScript();
-    }
-  } else {
-    loadScript();
-  }
-  function loadScript() {
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = scriptURL;
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
-    script.onload = ShopifyBuyInit;
-  }
-  function ShopifyBuyInit() {
-    var client = ShopifyBuy.buildClient({
-      domain: '1n5jeb-1c.myshopify.com',
-      storefrontAccessToken: '26f0bb9f9effaec363c0ef6b3b01d79d',
-    });
-    ShopifyBuy.UI.onReady(client).then(function (ui) {
-      ui.createComponent('collection', {
-        id: '306809176141',
-        node: document.getElementById('collection-component-1785095239479'),
-        moneyFormat: '%24%7B%7Bamount%7D%7D',
-        options: {
-  "product": {
- DOMEvents: {
-      'click .shopify-buy__product-img': function(evt, target) {
-        evt.preventDefault();
-        
-        // 1. Grab the exact image URL from the clicked element
-        let highResSrc = target.src;
-        
-        // 2. Remove Shopify compression tags to get the ultra-detailed original image
-        highResSrc = highResSrc.replace(/_[0-9]+x[0-9]+_crop_center\./, '.')
-                               .replace(/_[0-9]+x[0-9]+\./, '.')
-                               .replace(/_master\./, '.');
-
-        // 3. Send it straight to the enlargement window
-        const displayWindow = document.getElementById('mat-large-view');
-        const displayImage = document.getElementById('large-view-img');
-        
-        displayImage.src = highResSrc;
-        displayWindow.style.display = 'flex';
-      }
-    },
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "calc(25% - 20px)",
-          "margin-left": "20px",
-          "margin-bottom": "50px",
-          "width": "calc(25% - 20px)"
-        },
-        "img": {
-          "height": "calc(100% - 15px)",
-          "position": "absolute",
-          "left": "0",
-          "right": "0",
-          "top": "0"
-        },
-        "imgWrapper": {
-          "padding-top": "calc(75% + 15px)",
-          "position": "relative",
-          "height": "0"
-        }
-      },
-      "button": {
-        ":hover": {
-          "background-color": "#305a4d"
-        },
-        "background-color": "#1c352d",
-        ":focus": {
-          "background-color": "#305a4d"
-        }
-      }
-    },
-    "text": {
-      "button": "Add to cart"
-    }
-  },
-  "productSet": {
-    "styles": {
-      "products": {
-        "@media (min-width: 601px)": {
-          "margin-left": "-20px"
-        }
-      }
-    }
-  },
-  "modalProduct": {
-    "contents": {
-      "img": false,
-      "imgWithCarousel": true,
-      "button": false,
-      "buttonWithQuantity": true
-    },
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "100%",
-          "margin-left": "0px",
-          "margin-bottom": "0px"
-        }
-      },
-      "button": {
-        ":hover": {
-          "background-color": "#305a4d"
-        },
-        "background-color": "#1c352d",
-        ":focus": {
-          "background-color": "#305a4d"
-        }
-      }
-    },
-    "text": {
-      "button": "Add to cart"
-    }
-  },
-  "option": {},
-  "cart": {
-    "styles": {
-      "button": {
-        ":hover": {
-          "background-color": "#305a4d"
-        },
-        "background-color": "#1c352d",
-        ":focus": {
-          "background-color": "#305a4d"
-        }
-      }
-    },
-    "text": {
-      "total": "Subtotal",
-      "button": "Checkout"
-    }
-  },
-  "toggle": {
-    "styles": {
-      "toggle": {
-        "background-color": "#1c352d",
-        ":hover": {
-          "background-color": "#305a4d"
-        },
-        ":focus": {
-          "background-color": "#305a4d"
-        }
-      }
-    }
-  }
+ var scriptURL = 'https://shopifycdn.com';
+ if (window.ShopifyBuy) {
+ if (window.ShopifyBuy.UI) {
+ ShopifyBuyInit();
+ } else {
+ loadScript();
+ }
+ } else {
+ loadScript();
+ }
+ function loadScript() {
+ var script = document.createElement('script');
+ script.async = true;
+ script.src = scriptURL;
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+ script.onload = ShopifyBuyInit;
+ }
+ function ShopifyBuyInit() {
+ var client = ShopifyBuy.buildClient({
+ domain: '://myshopify.com',
+ storefrontAccessToken: '26f0bb9f9effaec363c0ef6b3b01d79d',
+ });
+ ShopifyBuy.UI.onReady(client).then(function (ui) {
+ ui.createComponent('collection', {
+ id: '306809176141',
+ node: document.getElementById('collection-component-1785095239479'),
+ moneyFormat: '%24%7B%7Bamount%7D%7D',
+ options: {
+ "product": {
+ "styles": {
+ "product": {
+ "@media (min-width: 601px)": {
+ "max-width": "calc(25% - 20px)",
+ "margin-left": "20px",
+ "margin-bottom": "50px",
+ "width": "calc(25% - 20px)"
+ },
+ "img": {
+ "height": "calc(100% - 15px)",
+ "position": "absolute",
+ "left": "0",
+ "right": "0",
+ "top": "0"
+ },
+ "imgWrapper": {
+ "padding-top": "calc(75% + 15px)",
+ "position": "relative",
+ "height": "0"
+ }
+ },
+ "button": {
+ ":hover": {
+ "background-color": "#305a4d"
+ },
+ "background-color": "#1c352d",
+ ":focus": {
+ "background-color": "#305a4d"
+ }
+ }
+ },
+ "text": {
+ "button": "Add to cart"
+ }
+ },
+ "productSet": {
+ "styles": {
+ "products": {
+ "@media (min-width: 601px)": {
+ "margin-left": "-20px"
+ }
+ }
+ }
+ },
+ "modalProduct": {
+ "contents": {
+ "img": false,
+ "imgWithCarousel": true,
+ "button": false,
+ "buttonWithQuantity": true
+ },
+ "styles": {
+ "product": {
+ "@media (min-width: 601px)": {
+ "max-width": "100%",
+ "margin-left": "0px",
+ "margin-bottom": "0px"
+ }
+ },
+ "button": {
+ ":hover": {
+ "background-color": "#305a4d"
+ },
+ "background-color": "#1c352d",
+ ":focus": {
+ "background-color": "#305a4d"
+ }
+ }
+ },
+ "text": {
+ "button": "Add to cart"
+ }
+ },
+ "option": {},
+ "cart": {
+ "styles": {
+ "button": {
+ ":hover": {
+ "background-color": "#305a4d"
+ },
+ "background-color": "#1c352d",
+ ":focus": {
+ "background-color": "#305a4d"
+ }
+ }
+ },
+ "text": {
+ "total": "Subtotal",
+ "button": "Checkout"
+ }
+ },
+ "toggle": {
+ "styles": {
+ "toggle": {
+ "background-color": "#1c352d",
+ ":hover": {
+ "background-color": "#305a4d"
+ },
+ ":focus": {
+ "background-color": "#305a4d"
+ }
+ }
+ }
+ }
 },
-      });
-    });
-  }
+ });
+ });
+ }
 })();
 /*]]>*/
 </script>
-        
-        <!-- PASTE YOUR COPIED SHOPIFY MASTER COLLECTION CODE DIRECTLY ABOVE THIS LINE -->
+ 
+ <!-- PASTE YOUR COPIED SHOPIFY MASTER COLLECTION CODE DIRECTLY ABOVE THIS LINE -->
+ </main>
+ <!-- THE BRAND GUARANTEE BANNER -->
+ <section class="guarantee-banner">
+ <div class="guarantee-content">
+ <h2>The Flawless Flat-Lay Guarantee</h2>
+ <p>Our premium mahjong mats have <strong>NEVER BEEN FOLDED</strong>. From initial manufacturing in our studio to shipping and doorstep delivery, our mats are kept continuously rolled. Your mat arrives 100% crease-free, smooth, and ready for immediate play.</p>
+ </div>
+ </section>
+ <!-- PREMIUM SPECIFICATIONS -->
+ <section class="info-split">
+ 
+ <div class="info-block" style="grid-column: 1 / -1;">
+ <h2>Mat Specifications & Store Info</h2>
+ <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px 30px;">
+ <li><strong>Dimensions:</strong> 31.5" x 31.5" Square with polished rounded corners.</li>
+ <li><strong>Thickness:</strong> Heavy-duty 3mm thickness for luxury tile padding and tabletop sound dampening.</li>
+ <li><strong>Performance Surface:</strong> Ultra-smooth premium fabric print top that fully protects tiles and ensures fluid, easy sliding.</li>
+ <li><strong>Non-Slip Foundation:</strong> Heavyweight textured neoprene rubber backing locks down to eliminate slippage during tile shuffling.</li>
+ <li><strong>Anti-Fray Finish:</strong> Tight perimeter edge-stitching ensures zero peeling or fraying over years of club play.</li>
+ <li><strong>Shipping Timelines:</strong> In-stock designs dispatch from Los Angeles within 1–2 business days.</li>
+ </ul>
+ </div>
+ </section>
+ <footer style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 50px 20px;">
+ <!-- Local Linked Logo Image — Completely Foolproof Path -->
+ <a href="https://birdbamclub.com" target="_blank" style="display: inline-block; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+ <img src="logo.png" alt="Bird Bam Mahjong Club Logo" style="max-width: 180px; height: auto; display: block; border-radius: 4px;">
+ </a>
+ <div style="text-align: center; max-width: 600px;">
+ <p style="margin-bottom: 10px; opacity: 0.9;">&copy; 2026 Mahjong Mats. Secure checkout managed and processed via Bird Bam Mahjong Club.</p>
+ <p style="margin-bottom: 20px;">Customer Support: <a href="mailto:hello@mahjong-mats.com" style="color:var(--accent-color); font-weight:600; text-decoration: none;">info@birdbamclub.com</a></p>
+ <div class="social-links">
+ <a href="https://instagram.com" target="_blank">INSTAGRAM</a>
+ <a href="https://facebook.com" target="_blank">FACEBOOK</a>
+ <a href="https://tiktok.com" target="_blank">TIKTOK</a>
+ </div>
+ </div>
+ </footer>
 
-    </main>
-
-    <!-- THE BRAND GUARANTEE BANNER -->
-    <section class="guarantee-banner">
-        <div class="guarantee-content">
-            <h2>The Flawless Flat-Lay Guarantee</h2>
-            <p>Our premium mahjong mats have <strong>NEVER BEEN FOLDED</strong>. From initial manufacturing in our studio to shipping and doorstep delivery, our mats are kept continuously rolled. Your mat arrives 100% crease-free, smooth, and ready for immediate play.</p>
-        </div>
-    </section>
-
-    <!-- PREMIUM SPECIFICATIONS -->
-    <section class="info-split">
-        
-        <div class="info-block" style="grid-column: 1 / -1;">
-            <h2>Mat Specifications & Store Info</h2>
-            <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px 30px;">
-                <li><strong>Dimensions:</strong> 31.5" x 31.5" Square with polished rounded corners.</li>
-                <li><strong>Thickness:</strong> Heavy-duty 3mm thickness for luxury tile padding and tabletop sound dampening.</li>
-                <li><strong>Performance Surface:</strong> Ultra-smooth premium fabric print top that fully protects tiles and ensures fluid, easy sliding.</li>
-                <li><strong>Non-Slip Foundation:</strong> Heavyweight textured neoprene rubber backing locks down to eliminate slippage during tile shuffling.</li>
-                <li><strong>Anti-Fray Finish:</strong> Tight perimeter edge-stitching ensures zero peeling or fraying over years of club play.</li>
-                <li><strong>Shipping Timelines:</strong> In-stock designs dispatch from Los Angeles within 1–2 business days.</li>
-            </ul>
-        </div>
-
-    </section>
-
-    <footer style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 50px 20px;">
-        <!-- Local Linked Logo Image — Completely Foolproof Path -->
-        <a href="https://birdbamclub.com" target="_blank" style="display: inline-block; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-            <img src="logo.png" alt="Bird Bam Mahjong Club Logo" style="max-width: 180px; height: auto; display: block; border-radius: 4px;">
-        </a>
-
-        <div style="text-align: center; max-width: 600px;">
-            <p style="margin-bottom: 10px; opacity: 0.9;">&copy; 2026 Mahjong Mats. Secure checkout managed and processed via Bird Bam Mahjong Club.</p>
-            <p style="margin-bottom: 20px;">Customer Support: <a href="mailto:hello@mahjong-mats.com" style="color:var(--accent-color); font-weight:600; text-decoration: none;">info@birdbamclub.com</a></p>
-            <div class="social-links">
-                <a href="https://www.instagram.com/bbmahjclub/" target="_blank">INSTAGRAM</a>
-                <a href="https://www.facebook.com/bbmahjclub" target="_blank">FACEBOOK</a>
-                <a href="https://www.tiktok.com/@bbmahjclub" target="_blank">TIKTOK</a>
-            </div>
-        </div>
-    </footer>
-
-<!-- Large Detail View Window -->
-<div id="mat-large-view" style="display:none; position:fixed; z-index:999999; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.93); align-items:center; justify-content:center; cursor:zoom-out;" onclick="this.style.display='none'">
-  <!-- Close Button -->
-  <button style="position:absolute; top:20px; right:30px; color:#fff; font-size:50px; background:none; border:none; cursor:pointer;">&times;</button>
-  
-  <!-- The Large Image -->
-  <img id="large-view-img" style="max-width:92%; max-height:92%; object-fit:contain; border-radius:6px; box-shadow:0 12px 40px rgba(0,0,0,0.6);" src="" alt="Enlarged detailed mat view">
+<!-- Lightbox Modal View Window -->
+<div id="mat-large-view" style="display:none; position:fixed; z-index:999999; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); align-items:center; justify-content:center; cursor:zoom-out;">
+ <button id="lightbox-close-btn" style="position:absolute; top:20px; right:30px; color:#fff; font-size:60px; background:none; border:none; cursor:pointer; font-family:Arial, sans-serif; font-weight:300; line-height:1;">&times;</button>
+ <img id="large-view-img" style="max-width:92%; max-height:92%; object-fit:contain; border-radius:6px; box-shadow:0 12px 40px rgba(0,0,0,0.7);" src="" alt="Enlarged detailed mat view">
 </div>
 
+<!-- Lightbox Activation Logic -->
+<script type="text/javascript">
+  const overlayContainer = document.getElementById('mat-large-view');
+  const overlayCloseBtn = document.getElementById('lightbox-close-btn');
+  const largeImage = document.getElementById('large-view-img');
+  
+  function closeMatLightbox() {
+    if (overlayContainer) {
+      overlayContainer.style.display = 'none';
+      largeImage.src = '';
+    }
+  }
 
+  if (overlayContainer) overlayContainer.addEventListener('click', closeMatLightbox);
+  if (overlayCloseBtn) overlayCloseBtn.addEventListener('click', closeMatLightbox);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeMatLightbox();
+  });
+
+  // Safe tracking engine that runs directly on your parent page container
+  const parentClickEngine = setInterval(function() {
+    const shopifyIframes = document.querySelectorAll('iframe[name^="shopify-frame"]');
+    shopifyIframes.forEach(function(iframe) {
+      try {
+        const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+        const targetImages = innerDoc.querySelectorAll('.shopify-buy__product-img');
+        
+        targetImages.forEach(function(img) {
+          if (!img.dataset.hasLightbox) {
+            img.dataset.hasLightbox = "true";
+            img.style.cursor = 'zoom-in';
+            
+            // Listen for click inside iframe and safely transition the image path
+            img.addEventListener('click', function(e) {
+              e.preventDefault();
+              e.stopPropagation();
+              
+              let srcPath = img.src;
+              // Clean Shopify thumbnail extensions to show full master quality
+              srcPath = srcPath.replace(/_[0-9]+x[0-9]+_crop_center\./, '.')
+                               .replace(/_[0-9]+x[0-9]+\./, '.')
+                               .replace(/_master\./, '.')
+                               .replace(/_[0-9]+x\./, '.');
+              
+              largeImage.src = srcPath;
+              overlayContainer.style.display = 'flex';
+            });
+          }
+        });
+      } catch (err) {
+        // Safe cross-domain block fallback
+      }
+    });
+  }, 1000);
+  
+  setTimeout(function() { clearInterval(parentClickEngine); }, 30000);
+</script>
 </body>
 </html>
